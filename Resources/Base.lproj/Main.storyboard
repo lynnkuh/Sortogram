@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sortogram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,39 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WAN-8c-K4j">
+                                <rect key="frame" x="60" y="60" width="480" height="480"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeE-Sq-lL4">
+                                <rect key="frame" x="60" y="60" width="480" height="480"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="presentImagePickerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Teh-Oq-dXf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HeE-Sq-lL4" firstAttribute="width" secondItem="WAN-8c-K4j" secondAttribute="width" id="AwK-U2-Njs"/>
+                            <constraint firstItem="WAN-8c-K4j" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.8" id="G0Z-ne-NFB"/>
+                            <constraint firstItem="WAN-8c-K4j" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ReG-iL-YFj"/>
+                            <constraint firstItem="WAN-8c-K4j" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="fvp-3K-mwI"/>
+                            <constraint firstItem="HeE-Sq-lL4" firstAttribute="height" secondItem="WAN-8c-K4j" secondAttribute="height" id="jEl-rh-Vtd"/>
+                            <constraint firstItem="HeE-Sq-lL4" firstAttribute="centerX" secondItem="WAN-8c-K4j" secondAttribute="centerX" id="kFl-rY-RdZ"/>
+                            <constraint firstItem="WAN-8c-K4j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ss2-oc-5qE"/>
+                            <constraint firstItem="HeE-Sq-lL4" firstAttribute="centerY" secondItem="WAN-8c-K4j" secondAttribute="centerY" id="wnY-F0-bM2"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="WAN-8c-K4j" id="qTP-Um-ow6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="313" y="357"/>
         </scene>
     </scenes>
 </document>
