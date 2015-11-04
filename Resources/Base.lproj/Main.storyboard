@@ -22,11 +22,28 @@
                                 <rect key="frame" x="60" y="60" width="480" height="480"/>
                                 <animations/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeE-Sq-lL4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeE-Sq-lL4">
                                 <rect key="frame" x="60" y="60" width="480" height="480"/>
                                 <animations/>
+                                <state key="normal" image="Image"/>
                                 <connections>
                                     <action selector="presentImagePickerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Teh-Oq-dXf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nV-ny-5Vl">
+                                <rect key="frame" x="300" y="550" width="99" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Upload Button"/>
+                                <connections>
+                                    <action selector="uploadImageButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LUk-5B-tL0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SnE-T2-Qbm">
+                                <rect key="frame" x="200" y="550" width="84" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Filter Button"/>
+                                <connections>
+                                    <action selector="filterButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FND-P3-xgm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -35,16 +52,21 @@
                         <constraints>
                             <constraint firstItem="HeE-Sq-lL4" firstAttribute="width" secondItem="WAN-8c-K4j" secondAttribute="width" id="AwK-U2-Njs"/>
                             <constraint firstItem="WAN-8c-K4j" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.8" id="G0Z-ne-NFB"/>
+                            <constraint firstItem="SnE-T2-Qbm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-58" id="MHT-Co-ZiU"/>
                             <constraint firstItem="WAN-8c-K4j" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ReG-iL-YFj"/>
+                            <constraint firstItem="2nV-ny-5Vl" firstAttribute="top" secondItem="HeE-Sq-lL4" secondAttribute="bottom" constant="10" id="dkF-qB-bAr"/>
                             <constraint firstItem="WAN-8c-K4j" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="fvp-3K-mwI"/>
                             <constraint firstItem="HeE-Sq-lL4" firstAttribute="height" secondItem="WAN-8c-K4j" secondAttribute="height" id="jEl-rh-Vtd"/>
                             <constraint firstItem="HeE-Sq-lL4" firstAttribute="centerX" secondItem="WAN-8c-K4j" secondAttribute="centerX" id="kFl-rY-RdZ"/>
+                            <constraint firstItem="SnE-T2-Qbm" firstAttribute="top" secondItem="HeE-Sq-lL4" secondAttribute="bottom" constant="10" id="lFG-Fm-F2u"/>
+                            <constraint firstItem="2nV-ny-5Vl" firstAttribute="leading" secondItem="SnE-T2-Qbm" secondAttribute="trailing" constant="16" id="qdt-gF-fTw"/>
                             <constraint firstItem="WAN-8c-K4j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ss2-oc-5qE"/>
                             <constraint firstItem="HeE-Sq-lL4" firstAttribute="centerY" secondItem="WAN-8c-K4j" secondAttribute="centerY" id="wnY-F0-bM2"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="WAN-8c-K4j" id="qTP-Um-ow6"/>
+                        <outlet property="selectedImageButton" destination="HeE-Sq-lL4" id="Gxd-fG-qrs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -52,4 +74,7 @@
             <point key="canvasLocation" x="313" y="357"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="512" height="512"/>
+    </resources>
 </document>
