@@ -19,6 +19,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var selectedImageButton: UIButton!
     
     
+    
     @IBAction func filterButtonPressed(sender: AnyObject) {
         
             print("yay")
@@ -200,7 +201,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // MARK: UIImagePickerController Delegate
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
-        self.selectedImageButton.setImage(nil, forState: UIControlState.Normal)
+       self.selectedImageButton.setImage(nil, forState: UIControlState.Normal)
         self.imageView.image = image
         self.dismissViewControllerAnimated(true, completion: nil)
     }

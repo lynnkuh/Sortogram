@@ -92,12 +92,93 @@
                     <tabBarItem key="tabBarItem" title="Item" id="sH4-Vh-AKs"/>
                     <connections>
                         <outlet property="imageView" destination="WAN-8c-K4j" id="qTP-Um-ow6"/>
-                        <outlet property="selectedImageButton" destination="HeE-Sq-lL4" id="Gxd-fG-qrs"/>
+                        <outlet property="selectedImageButton" destination="HeE-Sq-lL4" id="DXg-7q-km3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1125" y="357"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="3MF-pA-7Ww">
+            <objects>
+                <viewController id="s3D-70-Frd" customClass="DisplayPicturesViewController" customModule="Sortogram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NzU-l7-YsO"/>
+                        <viewControllerLayoutGuide type="bottom" id="2JR-ll-gl3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1rj-gK-ReQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="c9C-Rk-Lej">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <animations/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FQM-y8-cLu">
+                                    <size key="itemSize" width="155" height="127"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="DisplayCollectionViewCell" reuseIdentifier="DisplayCollectionViewCell" id="cK2-ws-OKW" customClass="DisplayCollectionViewCell" customModule="Sortogram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="155" height="127"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="155" height="127"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D6Y-p0-DW8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="155" height="127"/>
+                                                    <animations/>
+                                                </imageView>
+                                            </subviews>
+                                            <animations/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstItem="D6Y-p0-DW8" firstAttribute="bottom" secondItem="cK2-ws-OKW" secondAttribute="bottom" id="33x-op-sZq"/>
+                                            <constraint firstItem="D6Y-p0-DW8" firstAttribute="width" secondItem="cK2-ws-OKW" secondAttribute="width" id="AJT-Zw-rea"/>
+                                            <constraint firstItem="D6Y-p0-DW8" firstAttribute="top" secondItem="cK2-ws-OKW" secondAttribute="top" id="LpV-Ad-nSZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="D6Y-p0-DW8" secondAttribute="trailing" id="equ-6l-nIm"/>
+                                            <constraint firstItem="D6Y-p0-DW8" firstAttribute="leading" secondItem="cK2-ws-OKW" secondAttribute="leading" id="g07-u4-WGr"/>
+                                            <constraint firstItem="D6Y-p0-DW8" firstAttribute="height" secondItem="cK2-ws-OKW" secondAttribute="height" id="k6d-8I-DDG"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="AJT-Zw-rea"/>
+                                                <exclude reference="k6d-8I-DDG"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="imageView" destination="D6Y-p0-DW8" id="ZFK-aL-joT"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="s3D-70-Frd" id="5PY-SW-aqy"/>
+                                    <outlet property="delegate" destination="s3D-70-Frd" id="Axu-Xc-var"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c9C-Rk-Lej" firstAttribute="top" secondItem="1rj-gK-ReQ" secondAttribute="top" id="1Jm-3A-q9A"/>
+                            <constraint firstAttribute="trailing" secondItem="c9C-Rk-Lej" secondAttribute="trailing" id="58w-Ve-xMP"/>
+                            <constraint firstItem="2JR-ll-gl3" firstAttribute="top" secondItem="c9C-Rk-Lej" secondAttribute="bottom" id="Bi6-hc-WPz"/>
+                            <constraint firstItem="c9C-Rk-Lej" firstAttribute="leading" secondItem="1rj-gK-ReQ" secondAttribute="leading" id="esW-z6-WAS"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Vdb-lV-b4r"/>
+                    <connections>
+                        <outlet property="itemView" destination="c9C-Rk-Lej" id="zwU-XP-ong"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aX2-tQ-BgW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="329" y="1036"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xPr-vh-ymI">
@@ -111,11 +192,12 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="w1L-2i-PfU"/>
+                        <segue destination="s3D-70-Frd" kind="relationship" relationship="viewControllers" id="0t0-uX-kVd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JMA-Rd-nvw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="313" y="357"/>
+            <point key="canvasLocation" x="335" y="323"/>
         </scene>
     </scenes>
     <resources>
