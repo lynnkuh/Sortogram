@@ -9,11 +9,20 @@
 import UIKit
 import Parse
 
+
+    
+    protocol PassImageFromGalleryDelegate {
+        func didSelectImageFromGallery(image: UIImage) -> ()
+    }
+
+
 class DisplayPicturesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var itemView: UICollectionView!
     
     @IBOutlet weak var imageView: UIImageView!
+    
+    var delegate: PassImageFromGalleryDelegate?
     
     var parseObjects = [PFObject]() {
         didSet {
@@ -80,6 +89,18 @@ class DisplayPicturesViewController: UIViewController, UICollectionViewDataSourc
             
             return cell
         }
+   
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        if let cellSelected = collectionView.cellForItemAtIndexPath(indexPath) as? DisplayCollectionViewCell {
+            let imageSelected = cellSelected.imageView.image
+            print(imageSelected)
+            if let imageSelected = imageSelected {
+                self.delegate?.didSelectImageFromGallery(imageSelected)
+            }
+        }
+    }
+    
+    
 
 /*
         func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
