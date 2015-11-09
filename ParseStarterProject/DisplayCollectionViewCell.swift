@@ -12,6 +12,7 @@ class DisplayCollectionViewCell: UICollectionViewCell {
     
         
     @IBOutlet weak var imageView: UIImageView!
+    
         
         var status: Status? {
             didSet {

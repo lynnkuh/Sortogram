@@ -20,7 +20,9 @@ class DisplayPicturesViewController: UIViewController, UICollectionViewDataSourc
     
     @IBOutlet weak var itemView: UICollectionView!
     
-    @IBOutlet weak var imageView: UIImageView!
+    
+    
+    let defaultImage = UIImage(named: "Image")
     
     var delegate: PassImageFromGalleryDelegate?
     
@@ -37,12 +39,18 @@ class DisplayPicturesViewController: UIViewController, UICollectionViewDataSourc
         super.viewDidLoad()
         self.itemView.delegate = self
         self.itemView.dataSource = self
-
+        
+        
+        let gestureRecognizer: UIPinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: "pinchGesture:")
+          itemView.addGestureRecognizer(gestureRecognizer)
+        
+    
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+     
         let query = PFQuery(className:"Status")
         query.whereKeyExists("image")
         query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
@@ -56,6 +64,16 @@ class DisplayPicturesViewController: UIViewController, UICollectionViewDataSourc
             }
             
         }
+        
+        
+    }
+    func pinchGesture(gestureRecognizer: UIPinchGestureRecognizer) {
+        print("gesture called")
+        // Create two custom flow layout cells
+        // One is from small to medium size
+        // One is from medium to large
+        // to pinch use option and my mouse
+        
     }
     
     
@@ -92,6 +110,12 @@ class DisplayPicturesViewController: UIViewController, UICollectionViewDataSourc
    
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         if let cellSelected = collectionView.cellForItemAtIndexPath(indexPath) as? DisplayCollectionViewCell {
+            cellSelected.backgroundColor = UIColor.whiteColor()
+            
+            
+            
+            //This is needed for Delegate method
+            
             let imageSelected = cellSelected.imageView.image
             print(imageSelected)
             if let imageSelected = imageSelected {
@@ -100,6 +124,7 @@ class DisplayPicturesViewController: UIViewController, UICollectionViewDataSourc
         }
     }
     
+   
     
 
 /*

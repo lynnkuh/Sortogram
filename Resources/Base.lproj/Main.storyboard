@@ -152,7 +152,7 @@
                                             </mask>
                                         </variation>
                                         <connections>
-                                            <outlet property="imageView" destination="D6Y-p0-DW8" id="ZFK-aL-joT"/>
+                                            <outlet property="imageView" destination="D6Y-p0-DW8" id="yYx-h6-g5x"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -167,7 +167,7 @@
                         <constraints>
                             <constraint firstItem="c9C-Rk-Lej" firstAttribute="top" secondItem="1rj-gK-ReQ" secondAttribute="top" id="1Jm-3A-q9A"/>
                             <constraint firstAttribute="trailing" secondItem="c9C-Rk-Lej" secondAttribute="trailing" id="58w-Ve-xMP"/>
-                            <constraint firstItem="2JR-ll-gl3" firstAttribute="top" secondItem="c9C-Rk-Lej" secondAttribute="bottom" id="Bi6-hc-WPz"/>
+                            <constraint firstItem="2JR-ll-gl3" firstAttribute="top" secondItem="c9C-Rk-Lej" secondAttribute="bottom" id="eQS-Gh-rse"/>
                             <constraint firstItem="c9C-Rk-Lej" firstAttribute="leading" secondItem="1rj-gK-ReQ" secondAttribute="leading" id="esW-z6-WAS"/>
                         </constraints>
                     </view>
