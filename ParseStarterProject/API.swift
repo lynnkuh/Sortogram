@@ -14,8 +14,7 @@ typealias ParseCompletionHandler = (success: Bool) -> ()
 class API {
     
     class func uploadImage(image: UIImage, completion: ParseCompletionHandler) {
-        
-        //        let smallImage = ImageResizer.resizeImage(image, size: CGSize(width: 500, height: 500))
+                
         
         if let imageData = UIImageJPEGRepresentation(image, 0.7) {
             
