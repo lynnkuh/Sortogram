@@ -99,6 +99,70 @@
             </objects>
             <point key="canvasLocation" x="1125" y="357"/>
         </scene>
+        <!--Photo Filter View Controller-->
+        <scene sceneID="F1n-g2-8Pn">
+            <objects>
+                <viewController id="IqM-GI-oOm" customClass="PhotoFilterViewController" customModule="Sortogram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r1f-lY-Mfn"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xra-2Q-ejr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tb5-vk-kmq" customClass="PhotoFilterCollectionViewCellTableViewCell" customModule="Sortogram" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fkX-mM-d4U">
+                                <rect key="frame" x="36" y="-8" width="407" height="235"/>
+                                <animations/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R5W-A5-wfm">
+                                    <size key="itemSize" width="150" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wJP-9g-vLc" customClass="PhotoFilterCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H5J-mD-Axz">
+                                                    <rect key="frame" x="0.0" y="14" width="150" height="150"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="Z0C-oa-Gct"/>
+                                                        <constraint firstAttribute="height" constant="150" id="c1H-8b-MDo"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <animations/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstItem="H5J-mD-Axz" firstAttribute="leading" secondItem="wJP-9g-vLc" secondAttribute="leading" id="HyL-B7-Glt"/>
+                                            <constraint firstItem="H5J-mD-Axz" firstAttribute="bottom" secondItem="wJP-9g-vLc" secondAttribute="bottomMargin" constant="22" id="kY7-yS-bVB"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="H5J-mD-Axz" id="Bv2-zL-61N"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="fkX-mM-d4U" id="kWm-7j-tAm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="in5-Rx-1mI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1109" y="1052"/>
+        </scene>
         <!--Item-->
         <scene sceneID="3MF-pA-7Ww">
             <objects>
@@ -115,22 +179,31 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <animations/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FQM-y8-cLu">
-                                    <size key="itemSize" width="155" height="127"/>
+                                    <size key="itemSize" width="99" height="91"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="DisplayCollectionViewCell" reuseIdentifier="DisplayCollectionViewCell" id="cK2-ws-OKW" customClass="DisplayCollectionViewCell" customModule="Sortogram" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="155" height="127"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="99" height="91"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="155" height="127"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="99" height="91"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D6Y-p0-DW8">
-                                                    <rect key="frame" x="0.0" y="0.0" width="155" height="127"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="99" height="91"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="91" id="Brr-eU-tbm"/>
+                                                        <constraint firstAttribute="width" constant="100" id="OXN-qO-JVo"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="OXN-qO-JVo"/>
+                                                        </mask>
+                                                    </variation>
                                                 </imageView>
                                             </subviews>
                                             <animations/>
@@ -139,10 +212,14 @@
                                         <animations/>
                                         <constraints>
                                             <constraint firstItem="D6Y-p0-DW8" firstAttribute="bottom" secondItem="cK2-ws-OKW" secondAttribute="bottom" id="33x-op-sZq"/>
+                                            <constraint firstItem="D6Y-p0-DW8" firstAttribute="leading" secondItem="cK2-ws-OKW" secondAttribute="leadingMargin" constant="-8" id="8Hk-YK-MZc"/>
                                             <constraint firstItem="D6Y-p0-DW8" firstAttribute="width" secondItem="cK2-ws-OKW" secondAttribute="width" id="AJT-Zw-rea"/>
                                             <constraint firstItem="D6Y-p0-DW8" firstAttribute="top" secondItem="cK2-ws-OKW" secondAttribute="top" id="LpV-Ad-nSZ"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="D6Y-p0-DW8" secondAttribute="bottom" constant="-8" id="N52-VB-Q15"/>
                                             <constraint firstAttribute="trailing" secondItem="D6Y-p0-DW8" secondAttribute="trailing" id="equ-6l-nIm"/>
                                             <constraint firstItem="D6Y-p0-DW8" firstAttribute="leading" secondItem="cK2-ws-OKW" secondAttribute="leading" id="g07-u4-WGr"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="D6Y-p0-DW8" secondAttribute="trailing" constant="-8" id="gZc-aI-3MV"/>
+                                            <constraint firstItem="D6Y-p0-DW8" firstAttribute="top" secondItem="cK2-ws-OKW" secondAttribute="topMargin" constant="-8" id="iQL-Fe-N5e"/>
                                             <constraint firstItem="D6Y-p0-DW8" firstAttribute="height" secondItem="cK2-ws-OKW" secondAttribute="height" id="k6d-8I-DDG"/>
                                         </constraints>
                                         <variation key="default">

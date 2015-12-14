@@ -11,6 +11,9 @@
 		1A1FAD611BEABECC008AD141 /* DisplayPicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1FAD601BEABECC008AD141 /* DisplayPicturesViewController.swift */; };
 		1A1FAD631BEABFF2008AD141 /* DisplayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1FAD621BEABFF2008AD141 /* DisplayCollectionViewCell.swift */; };
 		1A278B881BE8128200FC0F59 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A278B871BE8128200FC0F59 /* Constants.swift */; };
+		1A4960FD1C1E7D5700691978 /* PhotoFilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4960FC1C1E7D5700691978 /* PhotoFilterCollectionViewCell.swift */; };
+		1A4960FF1C1E892400691978 /* PhotoFilterFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4960FE1C1E892400691978 /* PhotoFilterFlowLayout.swift */; };
+		1A5BFBF01C1D1BEC00FA6A8B /* PhotoFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5BFBEF1C1D1BEC00FA6A8B /* PhotoFilterViewController.swift */; };
 		1AC9A2081BE972A800D7D979 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC9A2071BE972A800D7D979 /* API.swift */; };
 		1AC9A20A1BE975FE00D7D979 /* FilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC9A2091BE975FE00D7D979 /* FilterService.swift */; };
 		1AC9A20C1BE97C4F00D7D979 /* ImageResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC9A20B1BE97C4F00D7D979 /* ImageResizer.swift */; };
@@ -33,6 +36,9 @@
 		1A1FAD601BEABECC008AD141 /* DisplayPicturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayPicturesViewController.swift; sourceTree = "<group>"; };
 		1A1FAD621BEABFF2008AD141 /* DisplayCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayCollectionViewCell.swift; sourceTree = "<group>"; };
 		1A278B871BE8128200FC0F59 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1A4960FC1C1E7D5700691978 /* PhotoFilterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoFilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		1A4960FE1C1E892400691978 /* PhotoFilterFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoFilterFlowLayout.swift; sourceTree = "<group>"; };
+		1A5BFBEF1C1D1BEC00FA6A8B /* PhotoFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoFilterViewController.swift; sourceTree = "<group>"; };
 		1AC9A2071BE972A800D7D979 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		1AC9A2091BE975FE00D7D979 /* FilterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterService.swift; sourceTree = "<group>"; };
 		1AC9A20B1BE97C4F00D7D979 /* ImageResizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageResizer.swift; sourceTree = "<group>"; };
@@ -107,6 +113,9 @@
 				81BA814C1A49DA1800E65899 /* ViewController.swift */,
 				1AC9A20D1BE985EF00D7D979 /* Status.swift */,
 				814C3AC61B69877600E307BB /* Main.storyboard */,
+				1A5BFBEF1C1D1BEC00FA6A8B /* PhotoFilterViewController.swift */,
+				1A4960FE1C1E892400691978 /* PhotoFilterFlowLayout.swift */,
+				1A4960FC1C1E7D5700691978 /* PhotoFilterCollectionViewCell.swift */,
 				1A1FAD601BEABECC008AD141 /* DisplayPicturesViewController.swift */,
 				1A1FAD621BEABFF2008AD141 /* DisplayCollectionViewCell.swift */,
 				1A1FAD5E1BEAB5DF008AD141 /* LaunchScreen.storyboard */,
@@ -238,10 +247,13 @@
 				1A1FAD611BEABECC008AD141 /* DisplayPicturesViewController.swift in Sources */,
 				1AC9A20E1BE985EF00D7D979 /* Status.swift in Sources */,
 				81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */,
+				1A5BFBF01C1D1BEC00FA6A8B /* PhotoFilterViewController.swift in Sources */,
 				1AC9A2081BE972A800D7D979 /* API.swift in Sources */,
 				1AC9A20C1BE97C4F00D7D979 /* ImageResizer.swift in Sources */,
+				1A4960FD1C1E7D5700691978 /* PhotoFilterCollectionViewCell.swift in Sources */,
 				1AE2CA931BEC0D4A005E5FED /* CustomFlowLayout.swift in Sources */,
 				1A278B881BE8128200FC0F59 /* Constants.swift in Sources */,
+				1A4960FF1C1E892400691978 /* PhotoFilterFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
