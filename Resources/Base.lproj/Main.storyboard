@@ -99,7 +99,7 @@
             </objects>
             <point key="canvasLocation" x="1125" y="357"/>
         </scene>
-        <!--Photo Filter View Controller-->
+        <!--Item-->
         <scene sceneID="F1n-g2-8Pn">
             <objects>
                 <viewController id="IqM-GI-oOm" customClass="PhotoFilterViewController" customModule="Sortogram" customModuleProvider="target" sceneMemberID="viewController">
@@ -121,7 +121,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wJP-9g-vLc" customClass="PhotoFilterCollectionViewCell">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoFilterCell" id="wJP-9g-vLc" customClass="PhotoFilterCollectionViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -155,13 +155,14 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Gx4-rf-FYz"/>
                     <connections>
                         <outlet property="collectionView" destination="fkX-mM-d4U" id="kWm-7j-tAm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="in5-Rx-1mI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1109" y="1052"/>
+            <point key="canvasLocation" x="1109" y="1162"/>
         </scene>
         <!--Item-->
         <scene sceneID="3MF-pA-7Ww">
@@ -255,7 +256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aX2-tQ-BgW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="329" y="1036"/>
+            <point key="canvasLocation" x="343" y="1280"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xPr-vh-ymI">
@@ -270,11 +271,12 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="w1L-2i-PfU"/>
                         <segue destination="s3D-70-Frd" kind="relationship" relationship="viewControllers" id="0t0-uX-kVd"/>
+                        <segue destination="IqM-GI-oOm" kind="relationship" relationship="viewControllers" id="Tz8-mY-mdU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JMA-Rd-nvw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="335" y="323"/>
+            <point key="canvasLocation" x="389" y="347"/>
         </scene>
     </scenes>
     <resources>

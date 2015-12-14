@@ -37,14 +37,15 @@ class PhotoFilterViewController: UIViewController, UICollectionViewDelegate, UIC
     
     var photoFilters = [FilterService.applyBWEffect, FilterService.applyChromeEffect, FilterService.applyVintageEffect, FilterService.applyBloomEffect, FilterService.applySepiaEffect]
     
-    func collectionView(collectionView: UICollectionView, numberofItemsinSection section: Int) -> Int {
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photoFilters.count
     }
     
-    func CollectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let photoFilterCell =
         collectionView.dequeueReusableCellWithReuseIdentifier("PhotoFilterCell", forIndexPath: indexPath) as! PhotoFilterCollectionViewCell
+       
         let photoFilterFunction = self.photoFilters[indexPath.row]
         
         if let image = self.image {
@@ -65,7 +66,10 @@ class PhotoFilterViewController: UIViewController, UICollectionViewDelegate, UIC
             let photoCell = collectionView.cellForItemAtIndexPath(indexPath) as!
             PhotoFilterCollectionViewCell
             
-            photoFilterViewControllerDidFinish(photoCell.imageView.image!)
+            delegate.photoFilterViewControllerDidFinish(photoCell.imageView.image!)
+         }
     }
 
 }
+
+
