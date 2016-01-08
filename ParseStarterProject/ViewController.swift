@@ -20,6 +20,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var selectedImageButton: UIButton!
     
+    @IBOutlet weak var filteredImage: UIImageView!
     
     
     var filteredThumbnailImages = [UIImage]() {

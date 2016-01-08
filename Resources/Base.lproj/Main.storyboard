@@ -135,6 +135,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="sH4-Vh-AKs"/>
                     <connections>
                         <outlet property="filteredCollectionView" destination="b8c-td-JJK" id="bpO-Lw-zsg"/>
+                        <outlet property="filteredImage" destination="6vV-Yb-eEJ" id="6RF-QU-TPB"/>
                         <outlet property="selectedImageButton" destination="HeE-Sq-lL4" id="DXg-7q-km3"/>
                     </connections>
                 </viewController>
