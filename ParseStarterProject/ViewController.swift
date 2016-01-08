@@ -12,7 +12,10 @@ import Parse
 
 
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, PassImageFromGalleryDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, PassImageFromGalleryDelegate,  UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    
+    @IBOutlet weak var filteredCollectionView: UICollectionView!
     
     @IBOutlet weak var imageView: UIImageView!
     
@@ -20,6 +23,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     
+    var filteredThumbnailImages = [UIImage]() {
+        didSet{
+            self.filteredCollectionView.reloadData()
+        }
+    }
     @IBAction func filterButtonPressed(sender: AnyObject) {
         
             print("yay")
@@ -55,6 +63,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 }
             }
     }
+   
+    
+    @IBAction func collectionViewThumbnailButtonPressed(sender: AnyObject) {
+        
+        
+    }
+    
     
     func presentFilterAlertView() {
         
@@ -157,7 +172,79 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             if let galleryViewController = viewControllers[1] as? DisplayPicturesViewController {
                 galleryViewController.delegate = self
                 
+                filteredCollectionView.delegate = self
+                self.filteredCollectionView.dataSource = self
+                self.createFilteredImages()
+                self.filteredCollectionView.hidden = true
+                
+                
+                let collectionViewBounds = CGRectGetWidth(UIScreen.mainScreen().bounds)
+                let collectionViewHeight = CGRectGetHeight(self.filteredCollectionView.frame)
+                let galleryLayout = PhotoGridLayout()
+                galleryLayout.thumbnailsFlowLayout(collectionViewBounds, viewHeight: collectionViewHeight)
+                self.filteredCollectionView.collectionViewLayout = galleryLayout
+                
             }
+        }
+    }
+        
+    // Stuff for the collection view of filtered images
+        
+        func createFilteredImages() {
+            self.filteredThumbnailImages.removeAll()
+            if let image = self.imageView.image {
+                FilterService.applyVintageEffect(image) { (filteredImage, name) -> Void in
+                    if let filteredImage = filteredImage {
+                        self.filteredThumbnailImages.append(filteredImage)
+                    }
+                }
+                
+                FilterService.applyBWEffect(image) { (filteredImage, name) -> Void in
+                    if let filteredImage = filteredImage {
+                        self.filteredThumbnailImages.append(filteredImage)
+                    }
+                }
+                
+                FilterService.applyChromeEffect(image) { (filteredImage, name) -> Void in
+                    if let filteredImage = filteredImage {
+                        self.filteredThumbnailImages.append(filteredImage)
+                    }
+                }
+                
+                FilterService.applySepiaEffect(image) { (filteredImage, name) -> Void in
+                    if let filteredImage = filteredImage {                        self.filteredThumbnailImages.append(filteredImage)
+                    }
+                }
+                
+                
+            }
+        }
+    
+
+        func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            return filteredThumbnailImages.count
+        }
+        
+        func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+            
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(FilterCollectionViewCell.identifier(), forIndexPath: indexPath) as! FilterCollectionViewCell
+            cell.image = self.filteredThumbnailImages[indexPath.row]
+            
+            return cell
+            
+        }
+        
+        func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+            let filteredImage = filteredThumbnailImages[indexPath.row]
+            self.imageView.image = filteredImage
+        }
+        
+        func collectionViewSelectedStatus(status: Status) {
+            self.dismissViewControllerAnimated(true, completion: nil)
+            self.imageView.image = status.image
+            tabBarController!.selectedViewController = tabBarController!.viewControllers![0]
+            createFilteredImages()
+            self.filteredCollectionView.hidden = false
         }
         
        
@@ -171,7 +258,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             print("Object has been saved.")
     
 */
-        }
+      
 
 
 func presentActionSheet() {
@@ -220,6 +307,8 @@ func presentImagePickerFor(sourceType: UIImagePickerControllerSourceType) {
        self.selectedImageButton.setImage(nil, forState: UIControlState.Normal)
         self.imageView.image = image
         self.dismissViewControllerAnimated(true, completion: nil)
+        createFilteredImages()
+        self.filteredCollectionView.hidden = false
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
@@ -231,7 +320,11 @@ func presentImagePickerFor(sourceType: UIImagePickerControllerSourceType) {
         self.imageView.image = image
         self.selectedImageButton.setImage(nil, forState: UIControlState.Normal)
     }
-
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

@@ -41,8 +41,6 @@ class DisplayPicturesViewController: UIViewController, UICollectionViewDataSourc
         self.itemView.dataSource = self
         
         
-        let gestureRecognizer: UIPinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: "pinchGesture:")
-          itemView.addGestureRecognizer(gestureRecognizer)
         
     
     }
@@ -67,16 +65,7 @@ class DisplayPicturesViewController: UIViewController, UICollectionViewDataSourc
         
         
     }
-    func pinchGesture(gestureRecognizer: UIPinchGestureRecognizer) {
-        print("gesture called")
-        // Create two custom flow layout cells
-        // One is from small to medium size
-        // One is from medium to large
-        // to pinch use option and my mouse
-        
-    }
-    
-    
+   
     
     
     
@@ -112,10 +101,7 @@ class DisplayPicturesViewController: UIViewController, UICollectionViewDataSourc
         if let cellSelected = collectionView.cellForItemAtIndexPath(indexPath) as? DisplayCollectionViewCell {
             cellSelected.backgroundColor = UIColor.whiteColor()
             
-            
-            
             //This is needed for Delegate method
-            
             let imageSelected = cellSelected.imageView.image
             print(imageSelected)
             if let imageSelected = imageSelected {
