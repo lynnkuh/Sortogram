@@ -15,12 +15,12 @@ import Parse
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, PassImageFromGalleryDelegate,  UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     
+    @IBOutlet weak var imageView: UIImageView!
+    
     @IBOutlet weak var filteredCollectionView: UICollectionView!
     
     
     @IBOutlet weak var selectedImageButton: UIButton!
-    
-    @IBOutlet weak var filteredImage: UIImageView!
     
     
     var filteredThumbnailImages = [UIImage]() {
