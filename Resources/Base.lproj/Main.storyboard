@@ -134,7 +134,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="sH4-Vh-AKs"/>
                     <connections>
-                        <outlet property="collectionViewThumbnailPressed" destination="KLx-zM-PqO" id="INk-T5-j3d"/>
                         <outlet property="filteredCollectionView" destination="b8c-td-JJK" id="bpO-Lw-zsg"/>
                         <outlet property="selectedImageButton" destination="HeE-Sq-lL4" id="DXg-7q-km3"/>
                     </connections>
@@ -146,7 +145,7 @@
         <!--CollectionView-->
         <scene sceneID="F1n-g2-8Pn">
             <objects>
-                <viewController storyboardIdentifier="CollectionView" id="IqM-GI-oOm" customClass="PhotoFilterViewController" customModule="Sortogram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CollectionView" id="IqM-GI-oOm" customClass="DisplayPicturesViewController" customModule="Sortogram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r1f-lY-Mfn"/>
                         <viewControllerLayoutGuide type="bottom" id="Xra-2Q-ejr"/>

@@ -17,7 +17,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var filteredCollectionView: UICollectionView!
     
-    @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var selectedImageButton: UIButton!
     
@@ -65,10 +64,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
    
     
-    @IBAction func collectionViewThumbnailButtonPressed(sender: AnyObject) {
-        
-        
-    }
     
     
     func presentFilterAlertView() {
