@@ -10,9 +10,9 @@ import UIKit
 
 class FilterCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var filteredImage: UIImageView!
    
-        
-        var image: UIImage? {
+            var image: UIImage? {
             didSet {
                 if let image = image {
                     self.filteredImage.image = image
