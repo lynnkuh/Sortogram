@@ -26,17 +26,6 @@
                                     <action selector="uploadImageButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LUk-5B-tL0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLx-zM-PqO">
-                                <rect key="frame" x="244" y="513" width="155" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="155" id="eA2-9G-VrI"/>
-                                </constraints>
-                                <state key="normal" title="CollectionViewButton"/>
-                                <connections>
-                                    <action selector="collectionViewThumbnailButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KeS-IP-Heh"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SnE-T2-Qbm">
                                 <rect key="frame" x="60" y="513" width="84" height="30"/>
                                 <animations/>
@@ -107,7 +96,6 @@
                             <constraint firstItem="HeE-Sq-lL4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="5pT-uT-OO3"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SnE-T2-Qbm" secondAttribute="bottom" constant="8" id="6qe-C2-eM4"/>
                             <constraint firstItem="SnE-T2-Qbm" firstAttribute="top" secondItem="b8c-td-JJK" secondAttribute="bottom" constant="61" id="9Lf-N2-w5E"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KLx-zM-PqO" secondAttribute="bottom" constant="8" id="BE2-GS-fDu"/>
                             <constraint firstItem="2nV-ny-5Vl" firstAttribute="leading" secondItem="SnE-T2-Qbm" secondAttribute="trailing" constant="8" id="BiP-DX-nLZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2nV-ny-5Vl" secondAttribute="trailing" constant="8" id="Cmb-YR-IEK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2nV-ny-5Vl" secondAttribute="trailing" constant="96" id="DTa-90-dSd"/>
@@ -127,14 +115,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="2nV-ny-5Vl" secondAttribute="trailing" constant="8" id="jMB-1q-dB8"/>
                             <constraint firstItem="SnE-T2-Qbm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="lo3-Ty-oSi"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2nV-ny-5Vl" secondAttribute="bottom" constant="5" id="lpm-TQ-CQ9"/>
-                            <constraint firstItem="2nV-ny-5Vl" firstAttribute="leading" secondItem="KLx-zM-PqO" secondAttribute="trailing" constant="74" id="lvg-Pi-JsF"/>
                             <constraint firstItem="SnE-T2-Qbm" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="nbK-6R-K4G"/>
                             <constraint firstItem="HeE-Sq-lL4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-26" id="oET-Zf-og3"/>
                             <constraint firstItem="SnE-T2-Qbm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="rXW-FI-snI"/>
-                            <constraint firstItem="KLx-zM-PqO" firstAttribute="leading" secondItem="SnE-T2-Qbm" secondAttribute="trailing" constant="100" id="sHS-8d-KlO"/>
                             <constraint firstItem="KOv-dM-m5F" firstAttribute="trailing" secondItem="HeE-Sq-lL4" secondAttribute="trailing" id="tiV-GU-x9D"/>
-                            <constraint firstItem="KLx-zM-PqO" firstAttribute="baseline" secondItem="SnE-T2-Qbm" secondAttribute="baseline" id="vGi-mR-5nC"/>
-                            <constraint firstItem="2nV-ny-5Vl" firstAttribute="leading" secondItem="KLx-zM-PqO" secondAttribute="trailing" constant="74" id="wOy-tn-V2E"/>
                             <constraint firstItem="SnE-T2-Qbm" firstAttribute="top" secondItem="HeE-Sq-lL4" secondAttribute="bottom" constant="8" id="y8l-Ku-JK4"/>
                             <constraint firstItem="b8c-td-JJK" firstAttribute="top" secondItem="KOv-dM-m5F" secondAttribute="bottom" constant="25" id="yTf-aX-HNe"/>
                         </constraints>
@@ -246,7 +230,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JMA-Rd-nvw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="337" y="403"/>
+            <point key="canvasLocation" x="371" y="333"/>
         </scene>
     </scenes>
     <resources>
